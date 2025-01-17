@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule, RouterLink } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 
@@ -14,7 +14,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ContainerComponent } from './components/container/container.component';
 
 
-const GLOBAL_MATERIALS = [RouterOutlet, HeaderComponent, FooterComponent, BannerComponent, ContainerComponent, CommonModule];
+const GLOBAL_MATERIALS = [RouterOutlet, RouterLink, RouterModule, HeaderComponent, FooterComponent, BannerComponent, ContainerComponent, CommonModule];
 
 @Component({
   selector: 'app-root',
