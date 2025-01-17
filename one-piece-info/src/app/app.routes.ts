@@ -7,7 +7,7 @@ export const routes: Routes = [
     {path:'', component: HomeComponent },
     {path:'sagas', component: TemporaryComponentComponent },
     {path:'arcs', component: TemporaryComponentComponent },
-    {path:'diable-fruits', component: TemporaryComponentComponent },
+    {path:'devil-fruits', component: TemporaryComponentComponent },
     {path:'dials', component: TemporaryComponentComponent },
     {path:'films', component: TemporaryComponentComponent },
     {path:'swords', component: TemporaryComponentComponent },
