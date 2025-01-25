@@ -14,3 +14,11 @@ img {
     object-fit: cover;
     object-position: center;
 }
+
+button {
+    background-color: #e70013;
+}
+
+button:hover {
+    background-color: #b3000f;
+}

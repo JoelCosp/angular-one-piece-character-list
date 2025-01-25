@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
+import { GBtnComponent } from '../g-btn/g-btn.component';
 
-const GLOBAL_MATERIALS = [RouterModule];
+const GLOBAL_MATERIALS = [RouterModule, GBtnComponent];
 
 @Component({
   selector: 'app-header',
