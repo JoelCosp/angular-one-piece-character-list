@@ -1,4 +1,4 @@
-<div class="cont flex justify-center relative overflow-x-auto shadow-md sm:rounded-lg">
+<div class="cont flex justify-center relative overflow-x-auto sm:rounded-lg my-20">
     <!-- BUSCADOR -->
     <!-- <div class="pb-4 bg-white dark:bg-gray-900">
         <label for="table-search" class="sr-only">Search</label>
@@ -16,71 +16,46 @@
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">
+                    IMG
+                </th>
+                <th scope="col" class="px-6 py-3">
                     NOMBRE
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    TAMAÑO
+                    DESCRIPCIÓN
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    EDAD
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    ROL
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    RECOMPENSA
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    FRUIT
+                    TIPO
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let character of charactersList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr *ngFor="let devilFruit of devilFruitList" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td class="px-6 py-4">
-                    <p *ngIf="character.name; else elseName">{{ character.name }}</p>
+                    <img [src]="devilFruit.filename" [alt]="devilFruit.name">
+                    <ng-template #elseFilename>
+                        <p>Desconocido</p>
+                    </ng-template>
+                </td>
+                <td class="px-6 py-4">
+                    <p *ngIf="devilFruit.name; else elseName">{{ devilFruit.name }}</p>
                     <ng-template #elseName>
                         <p>Desconocido</p>
                     </ng-template>
                 </td>
                 <td class="px-6 py-4">
-                    <p *ngIf="character.size; else elseSize">{{ character.size }}</p>
-                    <ng-template #elseSize>
+                    <p *ngIf="devilFruit.description; else elseDescription">{{ devilFruit.description }}</p>
+                    <ng-template #elseDescription>
                         <p>Desconocido</p>
                     </ng-template>
                 </td>
                 <td class="px-6 py-4">
-                    <p *ngIf="character.age; else elseAge">{{ character.age }}</p>
-                    <ng-template #elseAge>
+                    <p *ngIf="devilFruit.type; else elseType">{{ devilFruit.type }}</p>
+                    <ng-template #elseType>
                         <p>Desconocido</p>
-                    </ng-template>
-                </td>
-                <td class="px-6 py-4">
-                    <p *ngIf="character.job; else elseJob">{{ character.job }}</p>
-                    <ng-template #elseJob>
-                        <p>Desconocido</p>
-                    </ng-template>
-                </td>
-                <td class="px-6 py-4">
-                    <p *ngIf="character.bounty; else elseBounty">{{ character.bounty }}</p>
-                    <ng-template #elseBounty>
-                        <p>Desconocido</p>
-                    </ng-template>
-                </td>
-                <td class="px-6 py-4">
-                    <p *ngIf="character.fruit; else elseFruit">{{ character.fruit.name }}</p>
-                    <ng-template #elseFruit>
-                        <p>No tiene</p>
                     </ng-template>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-
-<!-- DATOS -->
-<!-- <div class="row">
-    <div class="col-3">
-        <div *ngFor="let character of charactersList">{{ character.id }} {{ character.name }}</div>
-    </div>
-</div> -->
